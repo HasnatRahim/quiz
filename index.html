@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #2E073F;
+            color: #EBD3F8;
+        }
+
+        .container {
+            background-color: #7A1CAC;
+        }
+
+        .item-div {
+            text-align: justify;
+            background-color: #AD49E1;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            /* background-color: #ffffff; */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .item {
+            font-weight: bold;
+            margin-bottom: 8px;
+            border-color: #7A1CAC;
+            font-weight: bolder;
+        }
+
+        .options {
+            gap: 8px;
+            cursor: pointer;
+            display: block;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body class="flex justify-center items-center h-screen w-full p-4 md:px-48">
+
+    <div class="container rounded-md grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+
+        <div class="q1 item-div max-sm:col-span-2">
+            <div class="item font-bold" >What Is This Quiz For?</div>
+            <span class="o1 options">
+                <label for="q1o1">
+                    <input type="radio" name="q1_option" id="q1o1"> Educational Purpose
+                </label>
+            </span>
+            <span class="o2 options">
+                <label for="q1o2">
+                    <input type="radio" name="q1_option" id="q1o2"> For Fun
+                </label>
+            </span>
+            <span class="o3 options">
+                <label for="q1o3">
+                    <input type="radio" name="q1_option" id="q1o3"> Time Pass
+                </label>
+            </span>
+            <span class="o4 options">
+                <label for="q1o4">
+                    <input type="radio" name="q1_option" id="q1o4"> All of the Above
+                </label>
+            </span>
+        </div>
+
+        <div class="q2 item-div max-sm:col-span-2">
+            <div class="item font-bold" >Who is the developer of this Quiz?</div>
+            <span class="o1 options">
+                <label for="q2o1">
+                    <input type="radio" name="q2_option" id="q2o1"> Sheikh Hasina
+                </label>
+            </span>
+            <span class="o2 options">
+                <label for="q2o2">
+                    <input type="radio" name="q2_option" id="q2o2"> Prince Mamun
+                </label>
+            </span>
+            <span class="o3 options">
+                <label for="q2o3">
+                    <input type="radio" name="q2_option" id="q2o3"> Hasnat
+                </label>
+            </span>
+            <span class="o4 options">
+                <label for="q2o4">
+                    <input type="radio" name="q2_option" id="q2o4"> Hero Alam
+                </label>
+            </span>
+        </div>
+
+        <div class="q3 item-div max-sm:col-span-2">
+            <div class="item font-bold" >How do you identify?</div>
+            <span class="o1 options">
+                <label for="q3o1">
+                    <input type="radio" name="q3_option" id="q3o1"> Men
+                </label>
+            </span>
+            <span class="o2 options">
+                <label for="q3o2">
+                    <input type="radio" name="q3_option" id="q3o2"> Women
+                </label>
+            </span>
+            <span class="o3 options">
+                <label for="q3o3">
+                    <input type="radio" name="q3_option" id="q3o3"> Sharif
+                </label>
+            </span>
+            <span class="o4 options">
+                <label for="q3o4">
+                    <input type="radio" name="q3_option" id="q3o4"> Sharifa
+                </label>
+            </span>
+        </div>
+
+        <div class="q4 item-div max-sm:col-span-2">
+            <div class="item font-bold" >What should be the primary focus of a student?</div>
+            <span class="o1 options">
+                <label for="q4o1">
+                    <input type="radio" name="q4_option" id="q4o1"> Playing Pubg till 3am
+                </label>
+            </span>
+            <span class="o2 options">
+                <label for="q4o2">
+                    <input type="radio" name="q4_option" id="q4o2"> Getting Tuition
+                </label>
+            </span>
+            <span class="o3 options">
+                <label for="q4o3">
+                    <input type="radio" name="q4_option" id="q4o3"> Support Chatroligue
+                </label>
+            </span>
+            <span class="o4 options">
+                <label for="q4o4">
+                    <input type="radio" name="q4_option" id="q4o4"> DIE
+                </label>
+            </span>
+        </div>
+
+        <button type="button" class="font-bold bg-[#AD49E1] py-2 w-full col-span-2 rounded-md active:bg-[#6d2892]" id="btn">Submit</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
