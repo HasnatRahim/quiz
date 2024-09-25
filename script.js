@@ -7,7 +7,7 @@ const questions = [
             "Time Pass",
             "All of the Above"
         ],
-        answer: "All of the Above"
+        answer: "Time Pass"
     },
     {
         question: "Who is the developer of this Quiz?",
@@ -17,7 +17,7 @@ const questions = [
             "Hasnat",
             "Hero Alam"
         ],
-        answer: "Prince Mamun"
+        answer: "Hasnat"
     },
     {
         question: "How do you identify?",
@@ -37,7 +37,7 @@ const questions = [
             "Support Chatroligue",
             "DIE"
         ],
-        answer: "Getting Tuition"
+        answer: "Support Chatroligue"
     }
 ];
 
