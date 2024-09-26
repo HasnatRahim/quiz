@@ -44,9 +44,17 @@
             display: block;
         }
 
-        i {
-            margin-right: 5px;
-        }
+.res-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7A1CAC;
+    border-color: #7A1CAC;
+    display: none;
+}
+
+
     </style>
 </head>
 
@@ -151,8 +159,8 @@
         </div>
 
         <button type="button" class="font-bold bg-[#AD49E1] py-2 w-full col-span-2 rounded-md active:bg-[#6d2892]" id="btn">Submit</button>
-
     </div>
+    <div class="rounded px-8 py-4 res-div">You scored 0 out of 4!</div>
 
     <script src="script.js"></script>
 </body>
