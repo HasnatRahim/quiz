@@ -1,64 +1,38 @@
-const questions = [
-    {
-        question: "What Is This Quiz For?",
-        options: [
-            "Educational Purpose",
-            "For Fun",
-            "Time Pass",
-            "All of the Above"
-        ],
-        answer: "Time Pass"
-    },
-    {
-        question: "Who is the developer of this Quiz?",
-        options: [
-            "Sheikh Hasina",
-            "Prince Mamun",
-            "Hasnat",
-            "Hero Alam"
-        ],
-        answer: "Hasnat"
-    },
-    {
-        question: "How do you identify?",
-        options: [
-            "Men",
-            "Women",
-            "Sharif",
-            "Sharifa"
-        ],
-        answer: "Men"
-    },
-    {
-        question: "What should be the primary focus of a student?",
-        options: [
-            "Playing Pubg till 3am",
-            "Getting Tuition",
-            "Support Chatroligue",
-            "DIE"
-        ],
-        answer: "Support Chatroligue"
-    }
-];
+const answers = {
+  q1: "Time Pass",
+  q2: "Hasnat",
+  q3: "Men",
+  q4: "Support Chatroligue",
+};
 
-let score = 0;
+const resultDiv = document.querySelector(".res-div");
+const container = document.querySelector(".container");
 
-// Function to check answers
-function checkAnswers() {
-    questions.forEach((q, index) => {
-        const selectedOption = document.querySelector(`input[name="q${index + 1}_option"]:checked`);
-        if (selectedOption && selectedOption.nextSibling.nodeValue.trim() === q.answer) {
-            score++;
-        }
-    });
-    displayResult();
-}
+document.getElementById("btn").addEventListener("click", function () {
+  const q1Selected = document.querySelector('input[name="q1_option"]:checked');
+  const q2Selected = document.querySelector('input[name="q2_option"]:checked');
+  const q3Selected = document.querySelector('input[name="q3_option"]:checked');
+  const q4Selected = document.querySelector('input[name="q4_option"]:checked');
 
-// Function to display results
-function displayResult() {
-    const container = document.querySelector('.container');
-    container.innerHTML = `<h2 class="text-center text-lg">You scored ${score} out of ${questions.length}!</h2>`;
-}
+  let score = 0;
 
-// Add event listener to the button
-document.getElementById('btn').addEventListener('click', checkAnswers);
+  if (q1Selected.nextSibling.textContent.trim() === answers.q1) {
+    score++;
+  }
+
+  if (q2Selected.nextSibling.textContent.trim() === answers.q2) {
+    score++;
+  }
+
+  if (q3Selected.nextSibling.textContent.trim() === answers.q3) {
+    score++;
+  }
+
+  if (q4Selected.nextSibling.textContent.trim() === answers.q4) {
+    score++;
+  }
+
+  resultDiv.innerText = "You scored " + score + " out of 4!";
+  resultDiv.style.display = "block"; // Show the result div
+  container.style.display = "none";
+});
